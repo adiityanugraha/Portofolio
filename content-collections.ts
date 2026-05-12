@@ -56,6 +56,7 @@ const projects = defineCollection({
     github: z.string().optional(),
     liveUrl: z.string().optional(),
     image: z.string().optional(),
+    highlight: z.boolean().optional(),
     content: z.string(),
   }),
 })
