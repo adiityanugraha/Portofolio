@@ -1,26 +1,22 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { ExternalLink } from 'lucide-react'
+import { Award, ExternalLink } from 'lucide-react'
 
 export const Route = createFileRoute('/resume')({
   component: Certifications,
 })
 
-function DicodingLogo() {
+function CertificationBadge({ issuer }: { issuer: string }) {
+  const isDicoding = issuer === 'Dicoding'
   return (
-    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-10 h-10">
-      <rect width="40" height="40" rx="8" fill="#4D47C3"/>
-      <text x="20" y="28" fontFamily="'Space Grotesk', sans-serif" fontWeight="700" fontSize="22" fill="white" textAnchor="middle">d</text>
-    </svg>
-  )
-}
-
-function IBMLogo() {
-  return (
-    <svg viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-12 h-8">
-      {/* IBM 8-bar stripe logo simplified */}
-      <rect width="48" height="32" rx="4" fill="#1F70C1"/>
-      <text x="24" y="21" fontFamily="'Arial', sans-serif" fontWeight="900" fontSize="15" fill="white" textAnchor="middle" letterSpacing="1">IBM</text>
-    </svg>
+    <div
+      className={[
+        'flex size-10 shrink-0 items-center justify-center rounded-lg',
+        isDicoding ? 'bg-[#4D47C3]' : 'bg-[#1F70C1]',
+      ].join(' ')}
+      aria-hidden
+    >
+      <Award className="size-5 text-white" strokeWidth={2} />
+    </div>
   )
 }
 
@@ -28,31 +24,26 @@ const certifications = [
   {
     title: 'Belajar Dasar AI',
     issuer: 'Dicoding',
-    logo: 'dicoding',
     link: 'https://www.linkedin.com/in/aditya-nugraha-a8725b2a5/details/certifications/',
   },
   {
     title: 'Memulai Pemrograman dengan Python',
     issuer: 'Dicoding',
-    logo: 'dicoding',
     link: 'https://www.linkedin.com/in/aditya-nugraha-a8725b2a5/details/certifications/',
   },
   {
     title: 'Belajar Machine Learning untuk Pemula',
     issuer: 'Dicoding',
-    logo: 'dicoding',
     link: 'https://www.linkedin.com/in/aditya-nugraha-a8725b2a5/details/certifications/',
   },
   {
     title: 'Introduction to Large Language Models',
     issuer: 'IBM',
-    logo: 'ibm',
     link: 'https://www.linkedin.com/in/aditya-nugraha-a8725b2a5/details/certifications/',
   },
   {
     title: 'Build an AI Agent',
     issuer: 'IBM',
-    logo: 'ibm',
     link: 'https://www.linkedin.com/in/aditya-nugraha-a8725b2a5/details/certifications/',
   },
 ]
@@ -73,9 +64,7 @@ function Certifications() {
             rel="noopener noreferrer"
             className="group flex items-center gap-5 p-5 rounded-xl border border-border hover:border-primary/40 hover:bg-card transition-all duration-200"
           >
-            <div className="shrink-0 flex items-center justify-center">
-              {cert.logo === 'dicoding' ? <DicodingLogo /> : <IBMLogo />}
-            </div>
+            <CertificationBadge issuer={cert.issuer} />
             <div className="flex-1 min-w-0">
               <p className="text-base font-medium text-foreground group-hover:text-primary transition-colors leading-snug">
                 {cert.title}

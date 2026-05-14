@@ -4,7 +4,7 @@ const socialLinks = [{
   href: "https://www.linkedin.com/in/aditya-nugraha-a8725b2a5/",
   icon: Linkedin,
   label: "LinkedIn",
-  handle: "aditya-nugraha-a8725b2a5",
+  handle: "aaaaditya-nugraha",
   color: "hover:text-blue-400"
 }, {
   href: "https://github.com/",

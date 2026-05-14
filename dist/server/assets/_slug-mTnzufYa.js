@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { marked } from "marked";
 import { B as Badge } from "./badge-BxI9hQBx.js";
 import { ArrowLeft, Calendar } from "lucide-react";
-import { R as Route } from "./router-BiEsMVOq.js";
+import { R as Route } from "./router-BPK7wL-m.js";
 import "@radix-ui/react-slot";
 import "class-variance-authority";
 import "clsx";

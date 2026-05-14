@@ -121,7 +121,7 @@ function RootDocument({ children }) {
     ] })
   ] });
 }
-const $$splitComponentImporter$4 = () => import("./resume-D7PoeIHr.js");
+const $$splitComponentImporter$4 = () => import("./resume-9PB6R9jn.js");
 const Route$4 = createFileRoute("/resume")({
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
@@ -129,7 +129,7 @@ const $$splitComponentImporter$3 = () => import("./projects-BJgbv3qJ.js");
 const Route$3 = createFileRoute("/projects")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./contact-BUtgYGLC.js");
+const $$splitComponentImporter$2 = () => import("./contact-Bz2pv76h.js");
 const Route$2 = createFileRoute("/contact")({
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
@@ -137,7 +137,7 @@ const $$splitComponentImporter$1 = () => import("./index-DtXev8KP.js");
 const Route$1 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./_slug-DnPxYAkd.js");
+const $$splitComponentImporter = () => import("./_slug-mTnzufYa.js");
 const Route = createFileRoute("/blog/$slug")({
   component: lazyRouteComponent($$splitComponentImporter, "component")
 });
