@@ -1,1 +1,17 @@
 node_modules
+
+# Build output
+dist
+.content-collections
+.tanstack
+.nitro
+.output
+
+# Deploy / platform
+.netlify
+.vercel
+
+# Env
+.env
+.env.*
+!.env.example
